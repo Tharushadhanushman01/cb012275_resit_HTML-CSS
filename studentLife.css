@@ -1,0 +1,265 @@
+/* Base Styles */
+:root {
+    --unsw-blue: #0055a2; /* Dark blue for good contrast */
+    --unsw-yellow: #ffd600; /* Bright yellow for highlights */
+    --dark-grey: #333; /* Dark grey for readable text */
+    --light-grey: #f7f7f7; /* Light grey for backgrounds */
+    --white: #ffffff; /* White for text on dark backgrounds */
+    --font-family: 'Arial', sans-serif;
+    --max-width: 1200px; 
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--dark-grey);
+    background-color: var(--light-grey);
+    margin: 0; 
+    border: none; 
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--unsw-blue);
+}
+
+img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
+/* Navigation Bar Styles with Transparent Background */
+nav {
+    background-color: rgba(0, 85, 162, 0.8); /* Transparent UNSW blue */
+    color: var(--white);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--unsw-blue); /* Optional bottom border */
+}
+
+
+
+.univ__logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.univ__links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.univ__link a {
+    color: var(--white);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.univ__link a:hover {
+    color: var(--unsw-yellow);
+}
+
+
+/* Header Container */
+.header__container {
+    background-image: url('images/2380306.jpg'); 
+    background-size:auto;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header__container h1 {
+    font-size: 2.5rem;
+}
+
+/* Student Quotes Section */
+.quote-section {
+    background-color: var(--unsw-yellow);
+    color: var(--unsw-blue);
+    padding: 2rem;
+    text-align: center;
+}
+
+.quote-section h2 {
+    font-weight: bold;
+}
+
+.quote {
+    font-style: italic;
+}
+
+/* Video Section */
+.video-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.video-section h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--dark-grey);
+}
+
+.video-section video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px; /* Reduced gap */
+    padding: 2rem 0;
+}
+
+.image-gallery img {
+    max-width: calc(25% - 5px); /* Smaller images */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation transition */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+}
+
+@media (max-width: 800px) {
+    .image-gallery img {
+        max-width: calc(50% - 5px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .image-gallery img {
+        max-width: calc(100% - 5px); /* Full width on very small screens */
+    }
+}
+
+
+.wrapper {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .wrapper2 {
+    background-image: url("images/14.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .wrapper2 .text {
+    background: rgba(44, 56, 85, 0.9);
+    padding: 20px;
+    color: var(--white);
+  }
+  
+  .wrapper2 .para {
+    margin: 20px 0;
+  }
+  
+  .wrapper2 img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+/* Footer */
+footer {
+    background-color: var(--unsw-blue);
+    color: var(--white);
+    padding: 1rem 0; /* Reduced padding */
+    text-align: center;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into multiple lines */
+    justify-content: center; /* Center align items */
+    gap: 1rem;
+}
+
+.footer__col {
+    flex: 1 1 200px; /* Each column takes at least 200px and grows equally */
+    margin: 0.5rem 0; /* Space between columns */
+}
+
+.footer__col h3, .footer__col h4 {
+    margin-bottom: 0.5rem; /* Reduced margin */
+}
+
+.footer__col p {
+    margin-bottom: 0.5rem; /* Reduced margin */
+}
+
+.footer__bar {
+    color: var(--white);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .univ__links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .univ__link {
+        margin: 0.5rem 0;
+    }
+
+    .univ__logo {
+        margin-bottom: 0.5rem;
+    }
+
+    .header__container {
+        padding: 30px 0;
+    }
+
+    .header__container h1 {
+        font-size: 2rem;
+    }
+
+    .video-section iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-gallery img {
+        max-width: calc(50% - 5px);
+    }
+
+    .wrapper, .wrapper2 {
+        padding: 15px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__col {
+        flex-basis: 100%; /* Full width for each column */
+        text-align: center;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .image-gallery img {
+        max-width: 100%;
+    }
+}

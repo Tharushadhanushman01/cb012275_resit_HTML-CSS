@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #2c3855;
+  --primary-color-dark: #435681;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.univ__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.univ__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.univ__link a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.univ__link a:hover {
+  color: var(--primary-color);
+}
+
+.header__container {
+  padding: 1rem;
+  text-align: center;
+}
+
+
+.header__image__container {
+  background: linear-gradient(
+      to right,
+      rgba(44, 56, 85, 0.9),
+      rgba(100, 125, 187, 0.1)
+  ),
+  url("images/8.png") center/cover no-repeat;
+  border-radius: 2rem;
+  min-height: 300px;
+}
+.header__content p {
+  color: var(--extra-light);
+}
+
+
+
+/*-------HOME page */ 
+
+.intro-section, .sub-section {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.sub-section img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+ul, ol {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  text-align: left; /* Align text to the left */
+}
+
+ul {
+  list-style-type: disc; /* Bullet points */
+  padding-left: 20px; /* Indent list items */
+}
+
+ol {
+  list-style-type: decimal; /* Numbered list */
+  padding-left: 20px; /* Indent list items */
+}
+@media only screen and (max-width: 600px) {
+ 
+
+  ul, ol {
+      padding: 0.5rem;
+      text-align: left;
+      padding-left: 15px; /* Smaller indent for smaller screens */
+  }
+}
+
+/*-------PROGRAM page */ 
+.program-section {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.program {
+  margin-bottom: 2rem;
+}
+
+.program img {
+  max-width: 50%; /* Smaller image size */
+  height: auto;
+}
+
+/* Fee Structure Table Styles */
+.fee-structure table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.fee-structure th, .fee-structure td {
+  border: 1px solid var(--primary-color-dark);
+  padding: 8px;
+  text-align: left;
+}
+
+.fee-structure th {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+
+/* Services & Facilities Section Styles */
+/* Services & Facilities Section Styles */
+.services-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.service {
+  width: 30%; /* Adjust based on preference */
+  margin-bottom: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease; /* Animation transition */
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Animation for the image */
+}
+
+.service:hover {
+  transform: scale(1.05); /* Scale up the service container on hover */
+}
+
+.service img:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+
+/* Partner Link Section */
+.partner-link {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.partner-link a {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+/* Faculty Section Styles */
+.faculty-section {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.faculty-program {
+  margin-bottom: 2rem;
+}
+
+.faculty-program h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.faculty-program ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+
+
+
+
+
+.footer {
+  background-color: var(--extra-light);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.footer__col h3, .footer__col h4 {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.footer__col p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.footer__col p:hover {
+  color: var(--text-dark);
+}
+
+.footer__bar {
+  text-align: center;
+  color: var(--text-light);
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for small screens */
+  .univ__logo {
+      font-size: 1.2rem; /* Smaller font size */
+  }
+
+  .univ__links {
+      flex-direction: column; /* Stack links vertically */
+      gap: 1rem;
+  }
+
+  .univ__link a {
+      font-size: 0.9rem; /* Smaller font size for links */
+  }
+
+  .header__container {
+      padding: 0.5rem;
+  }
+
+  .header__content h1 {
+      font-size: 1.8rem; /* Smaller heading */
+  }
+
+  .header__image__container {
+      min-height: 200px; /* Smaller height for header image */
+  }
+
+  .program-section {
+    padding: 0.5rem;
+}
+
+.program img {
+    max-width: 100%; /* Full width for smaller screens */
+}
+
+/* Fee Structure Table */
+.fee-structure {
+    padding: 0.5rem;
+}
+
+.fee-structure table {
+    font-size: 0.8rem; /* Smaller font size for table */
+}
+
+
+.services-section {
+  flex-direction: column;
+  align-items: center;
+}
+
+.service {
+  width: 80%; /* Larger width for smaller screens */
+}
+
+.program img, .fee-structure table {
+  max-width: 100%;
+}
+
+
+.faculty-program {
+  padding: 0.5rem;
+}
+
+.faculty-program h3 {
+  font-size: 1.5rem;
+}
+
+.faculty-program ul {
+  padding-left: 15px;
+}
+
+  .footer__container {
+      grid-template-columns: 1fr; /* Stack footer columns vertically */
+      gap: 1rem;
+  }
+
+}
